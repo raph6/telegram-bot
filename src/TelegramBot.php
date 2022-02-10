@@ -31,9 +31,16 @@ class TelegramBot {
 
         $channels = [];
         foreach ($output->result as $result) {
-            $chat_title = $result->my_chat_member->chat->title;
-            $chat_id = $result->my_chat_member->chat->id;
-    
+            if (isset($result->my_chat_member)) {
+                $chat_title = $result->my_chat_member->chat->title;
+                $chat_id = $result->my_chat_member->chat->id;
+            }
+
+            if (isset($result->message)) {
+                $chat_title = isset($result->message->chat->username) ? $result->message->chat->username : $result->message->chat->title;
+                $chat_id = $result->message->chat->id;
+            }
+            
             $channels[$chat_title] = $chat_id;
         }
 
