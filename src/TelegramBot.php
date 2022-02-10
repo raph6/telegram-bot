@@ -1,5 +1,7 @@
 <?php
 
+namespace raph6\TelegramBot;
+
 class TelegramBot {
     private $_ch;
     private $bot_token;
