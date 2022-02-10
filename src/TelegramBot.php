@@ -9,7 +9,7 @@ class TelegramBot {
     public function __construct($bot_token = null)
     {
         if ($bot_token == null) {
-            throw new Exception("Please provide a bot token.");
+            throw new \Exception("Please provide a bot token.");
         }
         $this->bot_token = $bot_token;
 
