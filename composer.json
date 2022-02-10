@@ -1,0 +1,23 @@
+{
+    "name": "raph6/telegram-bot",
+    "description": "Telegram Bot",
+    "keywords": ["telegram", "alerts", "notifications", "bot"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "raph",
+            "email": "contact@raph.cc"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
